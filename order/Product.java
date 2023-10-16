@@ -15,4 +15,14 @@ public class Product {
 	public String getId() {
 		return id;
 }
+	public double getPrice() {
+		return 0;
+	}
+	public Product getProduct() {
+		return null;
+	}
+	@Override
+    public String toString() {
+        return name + " (" + type + "): $" + price;
+    }
 }

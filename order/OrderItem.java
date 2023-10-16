@@ -8,13 +8,18 @@ public class OrderItem implements Comparable<OrderItem>{
 		this.p = p;
 		this.quantily = quantily;
 	}
-	@Override
-	public int compareTo(OrderItem o) {
-		
-		return p.getId().compareTo(o.p.getId());
-	}
+	
+	 public Product getProduct() {
+		    return p;
+		  }
+
 	@Override
 	public String toString() {
 		return p + ": " + quantily;
 	}
+	@Override
+	public int compareTo(OrderItem o) {
+	    return Double.compare(o.getProduct().getPrice(), p.getProduct().getPrice());
+	}
+
 }
